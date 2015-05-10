@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<object name="portal_javascripts">
+ <javascript cacheable="True" compression="none" cookable="True"
+    enabled="True" expression=""
+    id="++resource++kraeks.bannerimage/jquery.bxslider.min.js" inline="False"/>
+ <javascript cacheable="True" compression="none" cookable="True"
+    enabled="True" expression=""
+    id="++resource++kraeks.bannerimage/kraeks.bannerimage.slider.js" inline="False"/>
+</object>

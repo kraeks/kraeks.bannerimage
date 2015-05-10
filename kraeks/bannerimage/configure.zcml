@@ -1,0 +1,27 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+  xmlns:grok="http://namespaces.zope.org/grok"
+  xmlns:i18n="http://namespaces.zope.org/i18n"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+  i18n_domain="nva.titelbild">
+
+  <include package="five.grok" />
+  <grok:grok package="." />
+
+  <browser:resourceDirectory
+      name="kraeks.bannerimage"
+      directory="static" />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="kraeks.bannerimage"
+      directory="profiles/default"
+      description="Installs the kraeks.bannerimage package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <adapter factory=".extender.FolderImageExtender" name="folderimage" />
+  <adapter factory=".extender.TopicImageExtender" name="topicimage" />
+  <adapter factory=".extender.DocumentImageExtender" name="documentimage" />
+
+</configure>
