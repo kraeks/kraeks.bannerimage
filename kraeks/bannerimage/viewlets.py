@@ -29,7 +29,7 @@ class HeaderBannerImageViewlet(api.Viewlet):
         return myrefs
 
     def available(self):
-        if getattr(self.context, 'viewlet'):
+        if getattr(self.context, 'viewlet', None):
             if getattr(self.context, 'viewlet') == 'header':
                 return True
         return False
